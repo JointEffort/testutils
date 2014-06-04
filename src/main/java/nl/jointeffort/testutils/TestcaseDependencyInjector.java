@@ -1,12 +1,12 @@
-package nl.quintor.associates;
+package nl.jointeffort.testutils;
 
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.mockito.Mock;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Injects specified fields (based on property names).
@@ -15,7 +15,7 @@ import org.mockito.Mock;
  */
 public final class TestcaseDependencyInjector {
 
-	private static final Log LOG = LogFactory.getLog(TestcaseDependencyInjector.class);
+	private static final Logger LOG = LoggerFactory.getLogger(TestcaseDependencyInjector.class);
 	
     /**
      * Prevent instantiation.
@@ -37,7 +37,6 @@ public final class TestcaseDependencyInjector {
             try {
                 internalInject(dependant, mockFieldAndValue.getKey(), mockFieldAndValue.getValue());
             } catch (IllegalArgumentException exception) {
-                // bij auto injecten hoeft er geen exceptie worden gegooid.
                 LOG.info("Exception swallowed during mock auto injection for attribute "
                     + mockFieldAndValue.getKey());
             }
