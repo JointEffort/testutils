@@ -3,7 +3,7 @@
 
 	<groupId>nl.jointeffort</groupId>
 	<artifactId>testutils</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>testutils</name>
@@ -51,7 +51,7 @@
 		<url>scm:git:git@github.com:JointEffort/testutils.git</url>
 		<connection>scm:git:git@github.com:JointEffort/testutils.git</connection>
 		<developerConnection>scm:git:git@github.com:JointEffort/testutils.git</developerConnection>
-	  <tag>testutils-1.0</tag>
+	  <tag>HEAD</tag>
   </scm>
 	<build>
 		<plugins>
